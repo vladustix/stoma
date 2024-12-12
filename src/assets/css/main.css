@@ -1,0 +1,23 @@
+body {
+  @apply text-gray-600 bg-gray-50;
+}
+
+button[type="submit"],
+button[type="button"] {
+  @apply h-11 rounded-md bg-blue-500 text-white;
+}
+
+button[type="submit"]:disabled,
+button[type="button"]:disabled {
+  @apply opacity-40 cursor-not-allowed;
+}
+
+input[type="text"],
+input[type="tel"],
+input[type="password"] {
+  @apply w-full h-11 px-3 outline-none rounded-md border-2 border-gray-300 focus-within:border-black box-border bg-transparent;
+}
+
+.container {
+  @apply px-4 md:px-6 lg:px-8 mx-auto;
+}
