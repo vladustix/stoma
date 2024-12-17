@@ -32,7 +32,7 @@ const valid = computed(() => {
 });
 
 const send = async () => {
-  await $fetch("/api/bids", {
+  await $fetch("/api/request", {
     method: "POST",
     body: data,
   })

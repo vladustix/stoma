@@ -47,9 +47,6 @@ definePageMeta({
   layout: false,
   middleware: () => {
     if (!useCookie("stomaAuthToken").value) return;
-    if (useRouter().options.history) {
-      return useRouter().back();
-    }
     return navigateTo("/admin");
   },
 });

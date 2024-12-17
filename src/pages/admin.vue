@@ -1,9 +1,9 @@
 <template>
   <div class="container py-5">
     <h1 class="mb-4 font-medium text-3xl">Заявки</h1>
-    <table class="table-auto w-full">
+    <table v-if="!pending" class="table-auto w-full">
       <thead>
-        <tr>
+        <tr class="select-none">
           <th>ID</th>
           <th>Имя</th>
           <th>Телефон</th>
@@ -12,10 +12,18 @@
       </thead>
       <tbody>
         <tr v-for="bid in bids" :key="bid.id">
-          <td>{{ bid.id }}</td>
-          <td class="w-full">{{ bid.name }}</td>
-          <td>{{ bid.phone }}</td>
-          <td class="text-nowrap">{{ bid.createdAt }}</td>
+          <td v-text="bid.id" />
+          <td
+            v-text="bid.name"
+            @click="copyText(`+${bid.phone}`)"
+            class="w-full cursor-copy select-none"
+          />
+          <td
+            v-text="`+${bid.phone}`"
+            @click="copyText(`+${bid.phone}`)"
+            class="cursor-copy select-none"
+          />
+          <td v-text="bid.createdAt" class="text-nowrap select-none" />
         </tr>
       </tbody>
     </table>
@@ -25,7 +33,7 @@
 <script setup lang="ts">
 import moment from "moment";
 
-const { data: bids } = await useFetch("/api/bids", {
+const { data: bids, pending } = useFetch("/api/bids", {
   transform: (res) => {
     return res.map((bid) => ({
       ...bid,

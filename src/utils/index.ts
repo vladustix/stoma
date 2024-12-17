@@ -11,3 +11,7 @@ export const scrollSector = (to: string) => {
     block: "start",
   });
 };
+
+export const copyText = (text: string) => {
+  navigator.clipboard.writeText(text);
+};
