@@ -4,7 +4,7 @@ body {
 
 button[type="submit"],
 button[type="button"] {
-  @apply h-11 rounded-md bg-blue-500 text-white;
+  @apply h-11 px-5 rounded-md bg-blue-500 text-white;
 }
 
 button[type="submit"]:disabled,
