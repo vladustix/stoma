@@ -13,7 +13,35 @@ export default defineNuxtConfig({
     head: {
       htmlAttrs: {
         lang: 'ru',
-      }
+      },
+      link: [
+        {
+          rel: 'icon',
+          type: 'image/png',
+          href: '/favs/favicon-96x96.png',
+          sizes: '96x96',
+        },
+        {
+          rel: 'icon',
+          type: 'image/svg+xml',
+          href: '/favs/favicon.svg',
+        },
+        {
+          rel: 'apple-touch-icon',
+          sizes: '180x180',
+          href: '/favs/apple-touch-icon.png',
+        },
+        {
+          rel: 'manifest',
+          href: '/favs/site.webmanifest',
+        },
+      ],
+      meta: [
+        {
+          name: 'apple-mobile-web-app-title',
+          content: 'Red Dragon',
+        },
+      ],
     },
   },
   runtimeConfig: {

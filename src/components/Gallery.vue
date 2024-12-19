@@ -18,9 +18,9 @@
           },
         }"
       >
-        <SwiperSlide v-for="i in 37" :key="i" class="aspect-[16/9]">
+        <SwiperSlide v-for="i in 36" :key="i" class="aspect-[16/9]">
           <img
-            :src="`/images/xiu/${i < 10 ? '0' + i : i}.jpg`"
+            :src="`/images/xiu/${i + 1 < 10 ? '0' + (i + 1) : i + 1}.jpg`"
             alt="Фото"
             class="object-cover w-full h-full rounded-lg"
           />

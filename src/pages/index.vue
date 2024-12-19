@@ -7,12 +7,16 @@
         <div class="container grid lg:grid-cols-2 gap-10">
           <div class="flex flex-col gap-10">
             <div class="flex flex-col gap-3 text-white">
-              <h1 class="font-medium text-4xl">Клиника "Жуйкан" в г. Хэйхэ</h1>
+              <h1 class="font-medium text-4xl">
+                Стоматологическая клиника "Жуйкан" в г. Хэйхэ
+              </h1>
               <p>
-                Это современное медицинское учреждение, предлагающее широкий
-                спектр услуг.
+                Мы рады приветствовать вас в нашей стоматологической клинике,
+                где забота о вашем здоровье и комфорт - наш главный приоритет!
               </p>
-              <p class="font-medium text-lg">Оставьте заявку, чтобы:</p>
+              <p class="font-medium text-lg">
+                Установите от 8 и более коронок и получите:
+              </p>
               <ul class="flex flex-col gap-1.5">
                 <li class="flex items-start gap-1">
                   <Icon
@@ -20,7 +24,7 @@
                     size="24"
                     class="text-green-400"
                   />
-                  <span>Узнать стоимость лечения;</span>
+                  <span>Бесплатный проезд в Хэйхэ и обратно</span>
                 </li>
                 <li class="flex items-start gap-1">
                   <Icon
@@ -28,7 +32,7 @@
                     size="24"
                     class="text-green-400"
                   />
-                  <span>Согласовать дату и время визита;</span>
+                  <span>Бесплатное проживание с завтраками</span>
                 </li>
                 <li class="flex items-start gap-1">
                   <Icon
@@ -36,10 +40,14 @@
                     size="24"
                     class="text-green-400"
                   />
-                  <span>Получить ответы на все интересующие вас вопросы.</span>
+                  <span>Бесплатную визу в Китай</span>
                 </li>
               </ul>
-              <p class="underline">Ваше здоровье – наша забота!</p>
+              <p>
+                Не упустите шанс воспользоваться нашим уникальным предложением,
+                которое действует на ограниченное время. Свяжитесь с нами для
+                записи на консультацию и получения более подробной информации.
+              </p>
             </div>
             <RegistrationForm />
           </div>
@@ -50,6 +58,14 @@
     <Feature />
 
     <Service />
+
+    <div class="container py-10 flex justify-center">
+      <NuxtLink
+        to="/price"
+        class="px-8 py-4 rounded-xl bg-blue-500 font-medium text-lg text-white"
+        >Посмотреть прайс <Icon name="heroicons:arrow-right" size="24"
+      /></NuxtLink>
+    </div>
 
     <section id="about" class="container grid lg:grid-cols-2 gap-5">
       <div>
@@ -128,8 +144,6 @@
         </iframe>
       </div>
     </section>
-
-    <LazyPrice />
 
     <Recommendation />
 

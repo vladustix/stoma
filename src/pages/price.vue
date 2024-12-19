@@ -1,6 +1,6 @@
 <template>
-  <section class="container">
-    <h2 class="text-3xl font-semibold mb-6 text-center">Прайс</h2>
+  <div class="container py-10">
+    <h1 class="text-3xl font-semibold mb-6 text-center">Прайс</h1>
     <div class="w-1/2 xl:w-1/3 mx-auto flex flex-col gap-5">
       <div
         v-for="price in prices"
@@ -48,7 +48,13 @@
         </div>
       </div>
     </div>
-  </section>
+    <p class="mt-10 w-1/2 xl:w-1/3 mx-auto px-5 py-3 rounded-md bg-yellow-100">
+      Сумма протезирования зависит от выбора материала и количества зубов. Мы
+      рекомендуем подготовить панорамный снимок зубов для точного расчета.
+      Посетите любую стоматологию для этого или отправьте нам фото зубов верхней
+      и нижней челюсти - и мы сделаем предварительный расчет бесплатно для вас!
+    </p>
+  </div>
 </template>
 
 <script setup lang="ts">
