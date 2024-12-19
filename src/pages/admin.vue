@@ -46,6 +46,10 @@ definePageMeta({
   layout: "admin",
   middleware: "auth",
 });
+
+useServerSeoMeta({
+  robots: "noindex, nofollow",
+});
 </script>
 
 <style scoped>

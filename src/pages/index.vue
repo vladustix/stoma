@@ -209,6 +209,12 @@
   </div>
 </template>
 
+<script setup lang="ts">
+useServerSeoMeta({
+  title: "Стоматологическая клиника Жуйкан в Хэйхэ | Китай",
+});
+</script>
+
 <style>
 .title {
   @apply text-lg font-semibold mb-2;

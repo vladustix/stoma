@@ -102,4 +102,8 @@ const prices = [
     ],
   },
 ];
+
+useServerSeoMeta({
+  title: "Прайс - Жуйкан (Хэйхэ)",
+});
 </script>

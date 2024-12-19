@@ -50,4 +50,8 @@ definePageMeta({
     return navigateTo("/admin");
   },
 });
+
+useServerSeoMeta({
+  robots: "noindex, nofollow",
+});
 </script>
