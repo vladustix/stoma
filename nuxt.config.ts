@@ -16,6 +16,11 @@ export default defineNuxtConfig({
       }
     },
   },
+  runtimeConfig: {
+    username: process.env.USERNAME,
+    password: process.env.PASSWORD,
+    jwtSecret: process.env.JWT_SECRET,
+  },
   css: ['~/assets/css/main.css'],
   imports: {
     dirs: ['~/constants', '~/constants/*/**.{ts,js,mjs,mts}', '~/constants/**'],

@@ -1,6 +1,8 @@
 import jwt from 'jsonwebtoken';
 
 export default defineEventHandler((event) => {
+  const config = useRuntimeConfig();
+
   const path = getRequestURL(event).pathname;
   if (!path.startsWith('/api')) return;
 
@@ -10,7 +12,7 @@ export default defineEventHandler((event) => {
 
   if (!isInc) return;
 
-  if (!process.env.JWT_SECRET) {
+  if (!config.jwtSecret) {
     throw createError({
       statusCode: 506,
       message: 'Ошибка конфигурации сервера',
@@ -25,7 +27,7 @@ export default defineEventHandler((event) => {
     });
   }
   try {
-    jwt.verify(token, process.env.JWT_SECRET);
+    jwt.verify(token, config.jwtSecret);
   } catch (error) {
     throw createError({
       statusCode: 401,

@@ -7,13 +7,14 @@ type User = {
 
 export default defineEventHandler(async (event) => {
   const { username, password } = await readBody<User>(event);
-  if (username !== process.env.USERNAME && password !== process.env.PASSWORD) {
+  const config = useRuntimeConfig();
+  if (username !== config.username && password !== config.password) {
     throw createError({
       statusCode: 401,
       message: 'Неверный логин или пароль',
     });
   }
-  if (!process.env.JWT_SECRET) {
+  if (!config.jwtSecret) {
     throw createError({
       statusCode: 506,
       message: 'Ошибка конфигурации сервера',
@@ -21,7 +22,7 @@ export default defineEventHandler(async (event) => {
   }
   const token = jwt.sign(
     { username: username },
-    process.env.JWT_SECRET,
+    config.jwtSecret,
     { expiresIn: '7d' }
   );
   setCookie(event, 'stomaAuthToken', token, {
