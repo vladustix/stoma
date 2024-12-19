@@ -1,4 +1,4 @@
 export default defineNuxtRouteMiddleware((to, from) => {
-  const token = useCookie('stomaAuthToken').value;
+  const token = useCookie('adminAuthToken').value;
   if (!token) navigateTo('/login');
 });

@@ -25,7 +25,7 @@ export default defineEventHandler(async (event) => {
     config.jwtSecret,
     { expiresIn: '7d' }
   );
-  setCookie(event, 'stomaAuthToken', token, {
+  setCookie(event, 'adminAuthToken', token, {
     httpOnly: true,
     secure: true,
     path: '/',

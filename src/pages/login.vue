@@ -46,7 +46,7 @@ const login = async () => {
 definePageMeta({
   layout: false,
   middleware: () => {
-    if (!useCookie("stomaAuthToken").value) return;
+    if (!useCookie("adminAuthToken").value) return;
     return navigateTo("/admin");
   },
 });

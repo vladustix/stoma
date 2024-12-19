@@ -19,7 +19,7 @@ export default defineEventHandler((event) => {
     });
   }
 
-  const token = getCookie(event, 'stomaAuthToken');
+  const token = getCookie(event, 'adminAuthToken');
   if (!token) {
     throw createError({
       statusCode: 401,

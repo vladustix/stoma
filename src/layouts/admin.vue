@@ -17,7 +17,7 @@ const postLogout = async () => {
     method: "POST",
   })
     .then((res) => {
-      useCookie("stomaAuthToken").value = null;
+      useCookie("adminAuthToken").value = null;
       navigateTo("/");
     })
     .catch((err) => {
