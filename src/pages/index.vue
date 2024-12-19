@@ -7,7 +7,7 @@
         <div class="container grid lg:grid-cols-2 gap-10">
           <div class="flex flex-col gap-10">
             <div class="flex flex-col gap-3 text-white">
-              <h1 class="font-medium text-4xl">
+              <h1 class="font-medium text-3xl md:text-4xl">
                 Стоматологическая клиника "Жуйкан" в г. Хэйхэ
               </h1>
               <p>
@@ -69,7 +69,9 @@
 
     <section id="about" class="container grid lg:grid-cols-2 gap-5">
       <div>
-        <h2 class="text-3xl font-semibold mb-6">О клинике в г. Хэйхэ</h2>
+        <h2 class="font-medium text-3xl md:text-4xl mb-6">
+          О клинике в г. Хэйхэ
+        </h2>
         <p class="mb-6">
           Наш медицинский коллектив состоит из 30 высококвалифицированных
           специалистов. Общая площадь клиники составляет 1500 квадратных метров,
@@ -134,14 +136,38 @@
     <Gallery />
 
     <section class="container">
-      <h2 class="text-3xl font-semibold mb-6 text-center">Гостиница</h2>
-      <div class="flex items-center justify-center">
-        <iframe
-          width="480"
-          height="270"
-          src="https://youtu.be/B65EQIguPnQ?si=H0paxcAlTwsnaUVy"
-        >
-        </iframe>
+      <h2 class="mb-6 font-medium text-3xl md:text-4xl text-center">
+        Наши видео
+      </h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+        <div class="aspect-video">
+          <iframe
+            width="560"
+            height="280"
+            src="https://www.youtube.com/embed/RcVs-1uxY_Y?si=MtV252xLQ5_fuhbO"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen
+            class="object-cover w-full h-full"
+          />
+          <p class="text-gray-400 text-center mt-1">Клиника</p>
+        </div>
+        <div class="aspect-video">
+          <iframe
+            width="560"
+            height="280"
+            src="https://www.youtube.com/embed/B65EQIguPnQ?si=NaHMS_6HKe58Oj5z"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen
+            class="object-cover w-full h-full"
+          />
+          <p class="text-gray-400 text-center mt-1">Гостиница</p>
+        </div>
       </div>
     </section>
 
@@ -149,7 +175,7 @@
 
     <section class="container">
       <div class="rounded-lg shadow-md bg-blue-50 py-12 px-10">
-        <h2 class="text-3xl md:text-4xl font-medium text-center mb-8">
+        <h2 class="font-medium text-3xl md:text-4xl text-center mb-8">
           Лечебные туры в Хэйхэ: высококлассная стоматология по доступным ценам
         </h2>
         <p class="leading-relaxed mb-6">

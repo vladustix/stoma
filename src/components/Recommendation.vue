@@ -1,6 +1,6 @@
 <template>
   <section class="container">
-    <h2 class="text-3xl font-semibold mb-6 text-center">
+    <h2 class="mb-6 font-medium text-3xl md:text-4xl text-center">
       Рекомендации после протезирования зубов
     </h2>
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">

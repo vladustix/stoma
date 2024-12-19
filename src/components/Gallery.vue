@@ -1,6 +1,8 @@
 <template>
   <section id="gallery" class="container">
-    <h2 class="mb-6 font-medium text-4xl text-center">Галерея фотографий</h2>
+    <h2 class="mb-6 font-medium text-3xl md:text-4xl text-center">
+      Галерея фотографий
+    </h2>
     <div class="relative">
       <Swiper
         :breakpoints="{

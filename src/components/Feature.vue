@@ -1,6 +1,8 @@
 <template>
   <section class="container">
-    <h2 class="mb-6 font-medium text-4xl text-center">Почему выбирают нас?</h2>
+    <h2 class="mb-6 font-medium text-3xl md:text-4xl text-center">
+      Почему выбирают нас?
+    </h2>
     <div class="mb-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
       <div
         v-for="feature in features"

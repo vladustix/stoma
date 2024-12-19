@@ -1,6 +1,8 @@
 <template>
   <section id="service" class="container">
-    <h2 class="mb-6 font-medium text-4xl text-center">Услуги клиники</h2>
+    <h2 class="mb-6 font-medium text-3xl md:text-4xl text-center">
+      Услуги клиники
+    </h2>
     <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
       <div
         v-for="(service, i) in services"
